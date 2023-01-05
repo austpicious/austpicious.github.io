@@ -1,80 +1,62 @@
 ---
 layout: page
 title: ML for OOD Detection
-description: a project with a background image
-img: assets/img/12.jpg
+description: Pest Management with Wadhwani AI
+img: assets/img/projects/cotton_ace.png
 importance: 1
-category: work
+category: tech
 ---
+**Authors**: Austin Nguyen, Erin Tomlinson, Eric Helmold, Aloysius Lim, Molly Liu
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Affiliation**: Harvard University John A. Paulson School of Engineering and Applied Sciences, Harvard Institute for Applied Computational Science (IACS), Wadhwani AI
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Abstract**: Our goal is to identify and implement one or more effective solutions to the problem of out-of-distribution (OOD) image detection in Wadhwani AI's CottonAce pest management app, allowing it to reject errant images with minimal processing overhead. Our contributions to this work are an exploration of supervised, unsupervised, and self-supervised approaches for OOD detection. We explore convolutional autoencoders (CAEs) paired with latent dimensional analysis as our primary technique for OOD detection. We also find great potential in contrastive learning approaches to circumvent the need for costly annotation and handcrafted feature approaches which offer high interpretability and low computational costs. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+**Overview** 
+Launched by Wadhwani AI, CottonAce is a pest management mobile application that helps cotton farmers manage bollworm infestations in their fields. It uses an AI algorithm to identify and count bollworms in user-submitted photos and makes customized pesticide treatment recommendations based on what is found.
+
+**Problem** 
+Images submitted should follow the app's guidelines (i.e., taken on clean white paper) to maximize the success of CottonAce in identifying and counting pests. However, a key problem is that users may submit errant images that deviate from the submission guidelines. This can lead to downstream models returning erroneous pest counts on inappropriate images and can result in user attrition. The goal of our analysis was to investigate machine learning models that can help with out-of-distribution (OOD) image detection in this setting.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0" style="text-align:center">
+        {% include figure.html path="/assets/img/projects/project_ood_detection_example_imgs.png" title="ID vs. OOD vs. EC" class="img-fluid rounded z-depth-1" width='50%' %}
+    </div>
+</div>
+<div class="caption">
+    Figure 1: Example of ID, EC, and OOD  
+</div>
+
+
+**Solution** 
+We explored multiple approaches focused on OOD detection with the goal of allowing the app to reject errant images with minimal overhead processing. Our recommendation is to use a model with handcrafted features because it displays competitive performance across all metrics and is small enough to be easily deployed on a mobile device. If the constraint of model size can be relaxed, a more complex modeling approach such as using a convolutional neural network (CNN) or a convolutional autoencoder (CAE) with whitened density is recommended as both of these techniques have demonstrated strong performance and have the capacity to generalize better to unseen OOD examples. 
+
+**Highlights**
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/project_ood_detection_main_results.png" title="Main results" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Figure 2: Stoplight Chart of results across supervised and unsupervised techniques  
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+* Supervised models (rows 1-3) demonstrate strong performance on specific types of OOD images, but unsupervised/semi-supervised models (rows 4-7) may generalize better. 
+* In supervised setting, handcrafted features can achieve comparable performance to CNN with dramatically reduced model size, making it highly preferable on mobile platforms.
+* Image features learned by a CAE can be improved for anomaly detection tasks by applying a whitening transformation that increases the distance between in-distribution (ID) and OOD latent embeddings.
+* Contrastive learning (CSI) achieves competitive results out-of-the-box; further exploration with hyperparameter tuning for this technique is warranted.
+* Across all seven techniques, we observe very strong performance on identifying OOD images when tested on external datasets (Oxford Flowers and Stanford dogs). 
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+
+**Final Thoughts & Next Steps**
+
+Several approaches have the potential to be successful for OOD detection for Wadhwani AI. Supervised techniques demonstrate strong performance on the set of OOD images observed in Wadhwani’s Open Data, but unsupervised and self-supervised techniques have the potential to generalize better on unseen OOD images. For example, contrastive learning (CSI) as a self-supervised approach produces results that are strong without much tuning.  
+
+For future work, we advise training models with more data and better ID/OOD labels acquired via crowdsourcing to resolve edge cases, exploring generalization error on additional external datasets, and experimenting with the approach of applying a whitening transformation to the latent image representations obtained from a contrastive learning (CSI) model to combine the benefits of multiple approaches into one consolidated OOD detection model.
+
+
+
+**Deliverables**: <a href='https://github.com/harvard-ac297r-wadhwani-ai-pm/ood-detection'>GitHub</a>  •  <a href='/assets/pdf/projects_ood_detection_wadhwani_ai.pdf'>Technical Report</a>   
+

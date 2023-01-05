@@ -1,31 +1,42 @@
 ---
 layout: post
-title: Finished M.S. in Data Science at Harvard University
+title: Finished M.S. in Data Science at Harvard University 
 date: 2022-12-15 16:11:00-0400
 inline: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+> Freeing yourself was one thing, claiming ownership of that freed self was another.
+—Toni Morrison
 
 ***
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+I am excited to say that I finished my coursework for my Master of Science in Data Science at Harvard University's Institute for Applied Computational Sciences! :tada: From Head Start (a US HHS early education program for low-income children) and portable classrooms in underfunded and overcrowded public school districts to the bucolic bubble of Williams and the ivory fortress of Harvard, it's been a wild journey. It has been rewarding, but exhausting. 
 
-#### Hipster list
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+As the first in my family to graduate from college, I am honored to be the first to attend graduate school.  Graduating from Williams and stepping into the working world with a badge of privilege and access together was an act of freeing myself from socioeconomic adversity. Attending Harvard and navigating life after was and continues to be an act of trying to claim ownership of that freed self. For now, this looks like emails from Sallie Mae, but in time I am hoping to manifest a more freed self. 
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+Below are some highlights of my time along three axes: academic, extracurricular, personal. 
 
-***
+### Academic
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+A snapshot of a few of my favorite courses:
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
+* Machine Learning for Sustainable Systems at MIT
+* Bayesian Inference & Applications
+* Data Science II
+* Survey of Probabilistic Machine Learning
+* Grand Challenges in Technology at Harvard Kennedy School 
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+### Extracurricular 
+
+* I was co-chair of the Graduate Advisory Committee (GAC) of Harvard IACS
+* I was a research assistant at Harvard Business School (HBS)
+* I mentored two G1 students in my G2 year
+* I attended the Harvard Data Science Initiative (HDSI) conference in Fall 2022
+* I was part of the inaugural cohort of Diversity, Inclusion, and Leadership (DIL) Fellows that helped launch student-led orientation programming and a space for critical pedagogy in data science curriclum
+
+### Personal 
+* I took two ceramics classes!
+* I attended a relief-making workshop 
+* I gave my parents a full tour of Harvard and New England
+
+Onwards! 

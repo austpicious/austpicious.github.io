@@ -1,80 +1,28 @@
 ---
 layout: page
-title: Contrastive Learning for OOD Detection
-description: 
-img:
+title: ML for Mortality Prediction 
+description: Focus on explainability using SHAP
+img: assets/img/projects/project_mortality_shap.png
 importance: 3
-category: fun
+category: tech
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Authors**: Austin Nguyen, Molly Liu, Aloysius Lim
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Affiliation**: Harvard University John A. Paulson School of Engineering and Applied Sciences, Harvard Institute for Applied Computational Science (IACS)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+**Summary**: Mortality is a key concern at a population-level as well as at an individual-level. In this paper, we provide three approaches to understanding mortality: (1) model that predicts as a binary outcome whether a person will survive for at least 5 years, (2) a model that predicts whether a person will survive for at least 20 years and (3) a cox proportional hazard model to predict general survival period.  We find that the best model for the first two approaches is XGBoost given the highest AUC score of 0.80, a common metric used in machine learning applications. We hope our findings provide health policymakers as well as physicians with additional information to guide their policy decisions as well as healthcare guidance. 
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Conclusions**
+
+Connecting back to our objective of finding out which are the most important predictors of mortality, our models generally produced consistent results. Age is unsurprisingly the most important variable with gender, pulse pressure and poverty index, and a few other blood-related variables showing up as the other important variables. As such, we would recommend that such information should be collected for predictions on survival or mortality. 
+ 
+On our interpretability objective, a one-size fit all approach to modeling is unlikely able to address all questions from users. As results interpretation depends on our modeling approach, any such interpretation should be based on the objective of the users. 
+
+For example, an actuary may only be interested in the survival period of 5 years for the design of an insurance product. Interpretation should then be based more on the modeling results of the binary outcome of 5-years survival. For a doctor who may be interested in the survival curve of a patient for the next 20 years, interpretation should then be based on our survival analysis. 
+
+We would strongly recommend that any actions decided based on the results of our modeling should only be made with a good understanding of our limitations, and correspondingly adjust for any limitations.  In addition, we should be mindful of ethical considerations relating to unfair outcomes from discrimination. We believe that there is scope for future work which could improve the usability of the work as described in the next section. 
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+**Deliverables**: <a href='/assets/pdf/project_ml_mortality_prediction.pdf'>Technical Report</a>,  <a href='https://colab.research.google.com/drive/1DnaqQCGHeu7wAA7rveHMuF3ppIvKFJjo'>Colab Notebook</a>

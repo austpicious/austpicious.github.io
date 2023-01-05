@@ -4,8 +4,5 @@ github_users:
 github_repos:
   - harvard-ac297r-wadhwani-ai-pm/ood-detection
   - austpicious/ac209_mortality_prediction
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - cs107-califour/cs107-FinalProject
+
