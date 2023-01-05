@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 5
+title: NLP Design Choices in OOD Detection in Zero-Shot Learning
 description: a project with a background image
 img: assets/img/1.jpg
 importance: 3

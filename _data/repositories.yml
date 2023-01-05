@@ -1,10 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - austpicious
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
+  - harvard-ac297r-wadhwani-ai-pm/ood-detection
+  - austpicious/ac209_mortality_prediction
   - jekyll/jekyll
   - jquery/jquery
   - FortAwesome/Font-Awesome

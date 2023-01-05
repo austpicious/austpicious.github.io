@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Contrastive Learning for OOD Detection
+description: 
 img:
 importance: 3
 category: fun
