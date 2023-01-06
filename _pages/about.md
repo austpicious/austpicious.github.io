@@ -23,7 +23,7 @@ Most recently, I studied data science & machine learning at <a href='https://iac
 
 In my free time, I dabble in cooking, <a href='https://www.instagram.com/aust.nguyen.ceramics/'>ceramics</a>, and learning the art of being present. 
 
-<h3><b>tdlr;</b></h3>
+<h3><b>tldr;</b></h3>
 * <b>Currently</b>: Sabbatical 
 * <b>Incoming</b>: Senior Data Scientist @ <a href='https://nianticlabs.com/'>Niantic</a>
 * <b>Previous Affiliations</b>: 
